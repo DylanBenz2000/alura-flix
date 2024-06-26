@@ -1,0 +1,13 @@
+.banner{
+    background: url('./fondo.png');
+}
+
+.bannerFondo{
+    width: 100%;
+}
+
+.player{
+    box-shadow: inset 0px 0px 17px 8px #6BD1FF;
+    border-radius: 20px;
+    width: 500px;
+}

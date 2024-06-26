@@ -1,10 +1,10 @@
 import styles from './Footer.module.css'
-
+import logo from './LogoMain.png'
 const Footer = () =>{
     return(
-        <div>
-
-        </div>
+        <footer>
+            <img src={logo} alt='Logo Alura'/>
+        </footer>
     )
 }
 

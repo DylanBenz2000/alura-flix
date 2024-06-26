@@ -1,0 +1,8 @@
+.container{
+    background: #03122F;
+    sborder-width: 0px 5px 5px 5px;
+    border-style: solid;
+    border-color: #6BD1FF;
+    box-shadow: inset 0px -4px 5px 3px #6BD1FF;
+    border-radius: 0px 0px 15px 15px;
+}
