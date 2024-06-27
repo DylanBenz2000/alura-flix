@@ -1,6 +1,12 @@
+import styles from './NotFound.module.css'
+
 const NotFound = () => {
     return(
-        <h2>Lo sentimos la página no se encontro</h2>
+
+        
+        <div className={styles.notfound}>
+            
+        </div>
     )
 }
 

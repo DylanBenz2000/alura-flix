@@ -9,6 +9,12 @@ header{
 
 }
 
+
+
+a{
+    text-decoration: none;
+}
+
 .containerButtons{
     display: flex;
     gap: 10px;
