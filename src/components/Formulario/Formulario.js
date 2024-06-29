@@ -4,7 +4,9 @@ import { useState } from 'react';
 import ListaOpciones from '../ListaOpciones/ListaOpciones';
 import Boton from '../Boton/Boton';
 
-const Formulario = () => {
+import { agregarVideo } from '../../services/apiService';
+
+const Formulario = ({onVideoAdded}) => {
 
     const [titulo, setTitulo] = useState('');
     const [categoria, setCategoria] = useState('');
@@ -12,10 +14,31 @@ const Formulario = () => {
     const [video, setVideo] = useState('');
     const [descripcion, setDescripcion] = useState('');
 
+    const manejarEnvio = async (event) => {
+        event.preventDefault();
+        try {
+            const newVideo = await agregarVideo(titulo, categoria, imagen, video, descripcion);
+            onVideoAdded(newVideo);
+            limpiarInputs();
+            alert('Video agregado exitosamente');
+        } catch (error) {
+            alert('Error al agregar el video');
+        }
+    };
+
+    
+    function limpiarInputs(){
+        setTitulo('');
+        setCategoria('');
+        setImagen('');
+        setVideo('');
+        setDescripcion('');
+    }
+
     return(
         <>
         <section className={styles.formulario}>
-            <form>
+            <form onSubmit={manejarEnvio}>
                 <h1 className={styles.titulo}>Nuevo Vídeo</h1>
                 <p className={styles.parrafo}>COMPLETE EL FORMULARIO PARA CREAR UNA NUEVA TARJETA DE VÍDEO</p>
                 <h2 className={styles.subtitle}>Crear Tarjeta</h2>
@@ -67,6 +90,7 @@ const Formulario = () => {
                     borde="#007bff"
                     innerGlow="#007bff"
                     textColor="#007bff"
+                    type="submit"
                 >
                     Enviar
                 </Boton>
@@ -75,6 +99,7 @@ const Formulario = () => {
                 color="transparent"
                 borde="#fff"
                 textColor="#fff"
+                onclick ={limpiarInputs}
             >
                 Limpiar
             </Boton>

@@ -1,6 +1,6 @@
 import styles from './Boton.module.css'
 
-const Boton = ({ children, color, borde, innerGlow, textColor, customStyles }) =>{
+const Boton = ({ children, color, borde, innerGlow, textColor, customStyles, onclick, type }) =>{
 
     const estilo = {
         backgroundColor: color,
@@ -11,7 +11,12 @@ const Boton = ({ children, color, borde, innerGlow, textColor, customStyles }) =
     };
 
     return(
-        <button className={styles.boton} style={estilo}>
+        <button 
+            className={styles.boton} 
+            style={estilo} 
+            onClick={onclick}
+            type={type || 'button'}
+        >
             {children}
         </button>
     )

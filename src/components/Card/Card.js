@@ -2,7 +2,7 @@ import Boton from '../Boton/Boton'
 import ContainerButtons from '../ContainerButtons/ContainerButtons'
 import styles from './Card.module.css'
 
-const Card = ({ id, url, foto, titulo, categoriaColor }) => {
+const Card = ({ foto, titulo, categoriaColor }) => {
     return(
         <div className={styles.card} style={{ boxShadow: `0px 4px 8px ${categoriaColor}` }}>
             <img src={foto} className={styles.cardImg} style={{ boxShadow: `0px 4px 8px ${categoriaColor}` }} alt={titulo} />
