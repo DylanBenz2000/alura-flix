@@ -7,6 +7,7 @@ import NuevoVideo from "./pages/NuevoVideo/NuevoVideo"
 import VerVideo from "./components/VerVideo/VerVideo"
 import { getVideos } from "./services/apiService"
 import { useState, useEffect } from "react"
+import Player from "./pages/Player/Player"
 
 const AppRoutes = () =>{
 
@@ -30,8 +31,9 @@ const AppRoutes = () =>{
             <Cabecera />
                     
             <Routes>
-                <Route path="/" element={<Inicio videos={videos} />}/>
+                <Route path="/" element={<Inicio videos={videos} setVideos={setVideos} />}/>
                 <Route path="/videos/:id" element={<VerVideo />} />
+                <Route path=":id" element={<Player />} />
                 <Route path="*" element={<NotFound />}/>
                 <Route path="/nuevo-video" element={<NuevoVideo agregarVideo={agregarVideo}/>} />
             </Routes>

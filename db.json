@@ -18,15 +18,7 @@
   ],
   "posts": [
     {
-      "id": 1,
-      "titulo": "¿Cuál es la diferencia entre Front End y Back End?",
-      "categoria": "front end",
-      "foto": "https://i.ytimg.com/vi/R9uaBxgCkyA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBvfL19Yv6wW-CbVF1sibjUtE6gMg",
-      "url": "https://www.youtube.com/embed/R9uaBxgCkyA",
-      "descripcion": "En este Alura Más, Jeanmarie Quijada nos explica las principales diferencias y terminologias del desarrollo web."
-    },
-    {
-      "id": 2,
+      "id": "2",
       "titulo": "Equipo Front End",
       "categoria": "front end",
       "foto": "https://i.ytimg.com/vi/rpvrLaBQwgg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDoKpoRlVQCz_RrJKrwuA9onAd7Rw",
@@ -34,7 +26,7 @@
       "descripcion": "En este video, Jeanmarie Quijada, instructora Front End en Alura Latam te explica qué hace el equipo de Front End."
     },
     {
-      "id": 3,
+      "id": "3",
       "titulo": "¿Cómo un desarrollador Front End utiliza el Figma?",
       "categoria": "front end",
       "foto": "https://i.ytimg.com/vi/UuAX5azcvDQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrCt-PBwcf6kaY9dwPI0aJ78jXxQ",
@@ -42,15 +34,7 @@
       "descripcion": "En este Alura+, Genesys, instructora de Alura Latam, nos responde esa pregunta y nos muestra esta conocida herramienta."
     },
     {
-      "id": 4,
-      "titulo": "Especialidad BACKEND | RESUMEN SEMANA 1 - 3 | Oracle Next Education + Alura Latam",
-      "categoria": "back end",
-      "foto": "https://i.ytimg.com/vi/b71kWley8-o/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_ICYoLzAP&rs=AOn4CLCvNgRr8MEdjyYPFOlZZmtyYxoOFA",
-      "url": "https://www.youtube.com/embed/b71kWley8-o",
-      "descripcion": "Bienvenidos al Resumen de la semana 1, 2 y 3 de la especialización en Backend de Oracle Next Education @AluraLatam @Oracle"
-    },
-    {
-      "id": 5,
+      "id": "5",
       "titulo": "Café Punto Tech 14 | ¿Cómo elegir entre Frontend y Backend?",
       "categoria": "back end",
       "foto": "https://i.ytimg.com/vi/19x46ZQD49A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAihRW9mZl60yKZdkWqWSHIRCr-xg",
@@ -58,7 +42,7 @@
       "descripcion": "El próximo miércoles (30/11/22) tendremos un nuevo episodio de la nueva temporada de Café Punto Tech, y tenemos invitados especiales, la moderadora Génesys Rondón hablará con nuestra instructora Ellen Pimentel y nuestro instructor José Gonzalez para orientarte y darte consejos para decidir cuál de estas dos profesiones emprender y cuál se adapta a las preferencias y habilidades naturales de cada uno."
     },
     {
-      "id": 6,
+      "id": "6",
       "titulo": "Explorando el poder del Back-End en el Desarrollo Web",
       "categoria": "back end",
       "foto": "https://i.ytimg.com/vi/Z024LSCMqFk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB3xjx2-sGxZ00NSrSkEswD_8mPSA",
@@ -66,7 +50,7 @@
       "descripcion": "¡Videos nuevos todos los miércoles! A las 6pm México * 7pm Colombia * 8pm Bolivia * 9pm Argentina/Chile"
     },
     {
-      "id": 7,
+      "id": "7",
       "titulo": "¿Qué son las Soft Skills?",
       "categoria": "innovación y gestión",
       "foto": "https://i.ytimg.com/vi/vhwspfvI52k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxc_0rcRKCUTqYZXq2YUcjczMJNg",
@@ -74,7 +58,7 @@
       "descripcion": "¿Qué son las Softskills y por qué es tan importante desarrollarlas para posicionarse en el mercado laboral? En este video de Alura Tips, Pri Stuani nos habla de las habilidades más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día."
     },
     {
-      "id": 8,
+      "id": "8",
       "titulo": "¿Cómo es trabajar en una startup de tecnología?",
       "categoria": "innovación y gestión",
       "foto": "https://i.ytimg.com/vi/zEAD3Uq-C0g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmFklwvXyGhKA7HpTyz4PhDSJfCw",
@@ -82,28 +66,12 @@
       "descripcion": "En este video nuestras invitadas comentan un poco sobre su día a día trabajando en startups de tecnología."
     },
     {
-      "id": 9,
+      "id": "9",
       "titulo": "Desafíos y soluciones del trabajo remoto",
       "categoria": "innovación y gestión",
       "foto": "https://i.ytimg.com/vi/kIvnVfnmDyE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAlh-Eoy11cjQOCkD3vXatE0auOew",
       "url": "https://www.youtube.com/embed/kIvnVfnmDyE",
       "descripcion": "En el video de hoy vamos a ver cuáles son los desafíos y las soluciones que las empresas y los colaboradores enfrentan con el trabajo remoto."
-    },
-    {
-      "id": "b1a0",
-      "titulo": "Hola",
-      "categoria": "Front End",
-      "foto": "https://i.ytimg.com/vi/uWjG1_uTIsQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqkFvXCS5eCjJfCMmqpZfMCOCYJA",
-      "url": "https://www.youtube.com/embed/uWjG1_uTIsQ",
-      "descripcion": "Hola"
-    },
-    {
-      "id": "ea4e",
-      "titulo": "Prueba 2",
-      "categoria": "Front End",
-      "foto": "https://i.ytimg.com/vi/uWjG1_uTIsQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqkFvXCS5eCjJfCMmqpZfMCOCYJA",
-      "url": "https://www.youtube.com/embed/uWjG1_uTIsQ",
-      "descripcion": "prueba2"
     },
     {
       "id": "185b",
@@ -120,14 +88,6 @@
       "foto": "https://i.ytimg.com/vi/0Zb5fgO0ubE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBihTy9rQwkqKtVNiGWtfeEOvBLjQ",
       "url": "https://www.youtube.com/embed/0Zb5fgO0ubE",
       "descripcion": "Qué aprender para ser programador back end en el año 2023"
-    },
-    {
-      "id": "d9a8",
-      "titulo": "Lo que Debes Saber como Programador Backend en 2024",
-      "categoria": "Back End",
-      "foto": "https://i.ytimg.com/vi/qmIqP4GKUlI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDQ4u6NXXOG4mwXAlWwojeGRRlNEw",
-      "url": "https://www.youtube.com/embed/qmIqP4GKUlI",
-      "descripcion": "En este video te hablare de las cosas que son obligatorias para encontrar trabajo como programador backend en 2024."
     }
   ]
 }

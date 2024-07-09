@@ -3,12 +3,34 @@ import styles from './Inicio.module.css'
 import Card from '../../components/Card/Card'
 import Banner from '../../components/Banner/Banner'
 import CardTitle from '../../components/CardTitle/CardTitle';
-import { getCategorias, getVideos } from '../../services/apiService';
+import { getCategorias, getVideos, borrarVideo, obtenerUltimoVideo } from '../../services/apiService';
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";;
 
+const Inicio = ({ videos, setVideos }) => {
 
+    const [ultimoVideo, setUltimoVideo] = useState(null);
 
-const Inicio = ({ videos }) => {
+    useEffect(() =>{
+        obtenerUltimoVideo()
+        .then(data => {
+            setUltimoVideo(data);
+        })
+        .catch(error => {
+            console.error('Error fetching latest video:', error)
+        })
+    })
+
+    const handleDelete = async (id) => {
+        try {
+            await borrarVideo(id);
+            setVideos(prevVideos => prevVideos.filter(video => video.id !== id));
+        } catch (error) {
+            console.error('Error deleting video:', error);
+        }
+    }
 
     // const [videos, setVideos] = useState([])
     const [categorias, setCategorias] = useState([]);
@@ -31,43 +53,56 @@ const Inicio = ({ videos }) => {
         console.log('Videos received in Inicio:', videos);
     }, [videos]);
 
-    // useEffect( () => {
-    //     const fetchData = async () => {
-    //         try{
-    //             const videosData = await getVideos();
-    //             setVideos(videosData)
+    const settings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1300,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 2,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
+        ]
+    };
 
-    //             const categoriasData = await getCategorias();
-    //             setCategorias(categoriasData);
-    //         }catch (error){
-    //             console.error("Error fetching:", error)
-    //         }
-    //     };
-    //     fetchData();
-    // }, [])
-    
-
-
-    // useEffect( () => {
-    //     fetch("http://localhost:5000/posts")
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         setVideos(data)
-    //     })
-
-    //     fetch("http://localhost:5000/categorias")
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         setCategorias(data);
-    //     });
-
-    // }, [])
 
 
     return(
 
         <>
-            <Banner />
+        {ultimoVideo && (
+            <Banner 
+              titulo={ultimoVideo.titulo}
+              descripcion={ultimoVideo.descripcion}
+              imagen={ultimoVideo.foto}
+            />
+        )}
+            
             {categorias.map(categoria => {
                 const videosCategoria = videos.filter(video => video.categoria.toLowerCase() === categoria.nombre.toLowerCase());
                 return (
@@ -76,10 +111,13 @@ const Inicio = ({ videos }) => {
                             <CardTitle colorFondo={categoria.color}>{categoria.nombre}</CardTitle>
                         </div>
                         <div className={styles.container}>
+                        <Slider {...settings}>
                             {videosCategoria.map(video => (
-                                <Card key={video.id} {...video} categoriaColor={categoria.color} />
+                                <Card key={video.id} {...video} categoriaColor={categoria.color} onDelete={handleDelete} />
                             ))}
+                        </Slider>
                         </div>
+
                     </section>
                 );
             })}

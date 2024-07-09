@@ -59,3 +59,14 @@ export const borrarVideo = async (id) => {
         console.error('Error deleting video:', error);
     }
 }
+
+
+export const obtenerUltimoVideo = async () => {
+    try {
+        const response = await api.get('/posts?_sort=id&_order=desc&_limit=1');
+        return response.data[0]; // Devuelve el primer elemento del array (último vídeo)
+    } catch (error) {
+        console.error('Error en obtenerUltimoVideo:', error);
+        throw error;
+    }
+};
